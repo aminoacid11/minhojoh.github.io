@@ -3,41 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen | HCI Portfolio</title>
+    <title>Minho Joh | HCI Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
         
-        :root {
-            --primary: 234 179 8;
-        }
-        
         body {
             font-family: 'Inter', sans-serif;
         }
-        
         .heading-font {
             font-family: 'Space Grotesk', sans-serif;
         }
-
         .hero-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
         }
-
         .project-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-
         .nav-link {
             position: relative;
         }
-        
         .nav-link:after {
             content: '';
             position: absolute;
@@ -45,10 +35,9 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: rgb(var(--primary));
+            background-color: #eab308;
             transition: width 0.3s ease;
         }
-        
         .nav-link:hover:after {
             width: 100%;
         }
@@ -59,45 +48,45 @@
     <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-yellow-400 rounded-xl flex items-center justify-center text-zinc-900 font-bold text-xl">AC</div>
-                <span class="text-2xl font-semibold heading-font tracking-tight">Alex Chen</span>
+                <div class="w-9 h-9 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-900 font-bold text-2xl">MJ</div>
+                <span class="text-2xl font-semibold heading-font tracking-tight">Minho Joh</span>
             </div>
             
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#about" class="nav-link hover:text-yellow-400 transition-colors">About</a>
                 <a href="#projects" class="nav-link hover:text-yellow-400 transition-colors">Projects</a>
-                <a href="#essays" class="nav-link hover:text-yellow-400 transition-colors">Essays</a>
                 <a href="#diary" class="nav-link hover:text-yellow-400 transition-colors">Project Diary</a>
+                <a href="#essays" class="nav-link hover:text-yellow-400 transition-colors">Reflections</a>
             </div>
             
             <a href="https://github.com/yourusername" target="_blank" 
-               class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-2xl text-sm font-medium transition-colors">
+               class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-5 py-2.5 rounded-2xl text-sm font-medium transition-colors">
                 <i class="fa-brands fa-github"></i>
                 <span>GitHub</span>
             </a>
         </div>
     </nav>
 
-    <!-- Hero / Overview -->
-    <section class="hero-bg py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 bg-zinc-800 text-yellow-400 text-sm font-medium px-4 py-2 rounded-3xl mb-6">
-                <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                HCI • UX Design • Interaction Design
+    <!-- Hero -->
+    <section class="hero-bg py-28">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-zinc-800 text-yellow-400 text-sm font-medium px-5 py-2.5 rounded-3xl mb-6">
+                HCI • UX Design • AI Interaction
             </div>
             
             <h1 class="text-6xl md:text-7xl font-bold heading-font tracking-tighter mb-6">
-                Hi, I'm Alex Chen
+                Hi, I'm Minho Joh
             </h1>
             
             <p class="text-2xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                HCI student documenting my journey through human-centered design, interaction prototypes, and meaningful digital experiences.
+                Part-time Master's student in Artificial Intelligence at HKUST.<br>
+                Full-time CRM Email Specialist at Crypto.com.
             </p>
             
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#projects" 
                    class="bg-yellow-400 hover:bg-yellow-300 text-zinc-900 font-semibold px-8 py-4 rounded-3xl flex items-center gap-3 transition-all">
-                    View My Projects
+                    Explore My HCI Projects
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="#diary" 
@@ -105,189 +94,107 @@
                     Read Project Diary
                 </a>
             </div>
-            
-            <div class="mt-16 flex justify-center gap-8 text-sm text-zinc-500">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-university"></i>
-                    <span>University of XYZ • Year 3</span>
-                </div>
-                <div>Current Project: Smart Library Companion App</div>
-            </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
         <div class="grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5">
                 <img src="https://picsum.photos/id/64/600/700" 
-                     alt="Alex Chen" 
+                     alt="Minho Joh" 
                      class="rounded-3xl shadow-2xl w-full aspect-[4/5] object-cover">
             </div>
-            <div class="md:col-span-7">
-                <h2 class="text-4xl font-semibold heading-font mb-6">About Me</h2>
-                <div class="prose prose-invert max-w-none text-lg text-zinc-300">
-                    <p>I'm a passionate HCI student fascinated by how thoughtful design can bridge the gap between technology and human needs. With a background in psychology and computer science, I approach every project from a human-centered perspective.</p>
-                    <p>My current focus is on creating intuitive, accessible, and delightful digital experiences — particularly in educational and community contexts.</p>
+            <div class="md:col-span-7 space-y-8">
+                <h2 class="text-4xl font-semibold heading-font">About Me</h2>
+                <div class="prose prose-invert text-lg text-zinc-300">
+                    <p>I am a part-time Master's student in Artificial Intelligence at The Hong Kong University of Science and Technology (HKUST), while working full-time as a CRM Email Specialist at Crypto.com.</p>
+                    <p>My professional experience in email marketing and customer engagement, combined with my academic focus on AI, gives me a unique perspective on designing human-centered digital experiences. I am particularly interested in the intersection of AI and HCI — creating intuitive, intelligent, and delightful interfaces.</p>
                 </div>
                 
-                <div class="mt-10 grid grid-cols-3 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-zinc-800">
                     <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">12+</div>
-                        <div class="text-sm text-zinc-500">Prototypes Built</div>
+                        <div class="text-yellow-400 text-3xl font-semibold">HKUST</div>
+                        <div class="text-sm text-zinc-500">MSc in AI (Part-time)</div>
                     </div>
                     <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">5</div>
-                        <div class="text-sm text-zinc-500">Group Projects</div>
+                        <div class="text-yellow-400 text-3xl font-semibold">Crypto.com</div>
+                        <div class="text-sm text-zinc-500">CRM Email Specialist</div>
                     </div>
                     <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">∞</div>
-                        <div class="text-sm text-zinc-500">Cups of Coffee</div>
+                        <div class="text-yellow-400 text-3xl font-semibold">Figma</div>
+                        <div class="text-sm text-zinc-500">Advanced</div>
                     </div>
-                </div>
-                
-                <div class="mt-12">
-                    <h3 class="uppercase text-xs tracking-widest text-zinc-500 mb-4">Skills</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">Figma</span>
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">User Research</span>
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">Usability Testing</span>
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">HTML/CSS/JS</span>
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">Prototyping</span>
-                        <span class="bg-zinc-900 px-5 py-2 rounded-3xl text-sm">Wireframing</span>
+                    <div>
+                        <div class="text-yellow-400 text-3xl font-semibold">User Research</div>
+                        <div class="text-sm text-zinc-500">Experienced</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Overview -->
+    <!-- Projects -->
     <section id="projects" class="bg-zinc-900 py-20">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-4xl font-semibold heading-font">Featured Projects</h2>
-                <a href="projects/smart-library/index.html" 
-                   class="text-yellow-400 hover:text-yellow-300 flex items-center gap-2 text-sm font-medium">
-                    View All Projects <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+            <h2 class="text-4xl font-semibold heading-font mb-12">Featured HCI Project</h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Main Project Card -->
-                <a href="projects/smart-library/index.html" class="project-card bg-zinc-800 rounded-3xl overflow-hidden group">
-                    <div class="h-80 bg-zinc-700 relative">
-                        <img src="https://picsum.photos/id/1015/800/600" 
-                             alt="Smart Library App" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent h-1/3"></div>
-                        <div class="absolute bottom-6 left-6">
-                            <span class="bg-yellow-400 text-zinc-900 text-xs font-bold px-3 py-1 rounded-full">CURRENT</span>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-2">Smart Library Companion</h3>
-                        <p class="text-zinc-400 line-clamp-2">An AI-powered mobile app that makes library visits more engaging and accessible for university students.</p>
-                        <div class="mt-6 flex items-center gap-4 text-sm">
-                            <div class="flex -space-x-2">
-                                <div class="w-6 h-6 bg-purple-500 rounded-full border-2 border-zinc-800"></div>
-                                <div class="w-6 h-6 bg-pink-500 rounded-full border-2 border-zinc-800"></div>
-                            </div>
-                            <span class="text-zinc-500">Team of 4 • Spring 2026</span>
+            <div class="max-w-4xl mx-auto">
+                <a href="projects/smart-library/index.html" class="project-card block bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-96 bg-zinc-700 relative">
+                        <img src="https://picsum.photos/id/1015/1200/700" 
+                             alt="Smart Library Companion" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <span class="bg-yellow-400 text-zinc-900 text-xs font-bold px-4 py-2 rounded-full">CURRENT PROJECT</span>
+                            <h3 class="text-4xl font-semibold mt-4">Smart Library Companion</h3>
+                            <p class="text-zinc-300 mt-3 text-lg">An intelligent mobile application that enhances the library experience for university students using AI-powered recommendations and seamless interaction design.</p>
                         </div>
                     </div>
                 </a>
-                
-                <!-- Previous Project -->
-                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden group">
-                    <div class="h-80 bg-zinc-700 relative">
-                        <img src="https://picsum.photos/id/201/800/600" 
-                             alt="Previous Project" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-2">EcoTrack - Sustainable Habit Builder</h3>
-                        <p class="text-zinc-400 line-clamp-2">Gamified mobile experience that helps users build and maintain environmentally conscious habits.</p>
-                        <div class="mt-6 text-sm text-zinc-500">Solo Project • Fall 2025</div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Quick Diary / Latest Entry -->
-    <section id="diary" class="max-w-6xl mx-auto px-6 py-20">
-        <h2 class="text-4xl font-semibold heading-font mb-10">Project Diary • Smart Library Companion</h2>
+    <!-- Project Diary Teaser -->
+    <section id="diary" class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-4xl font-semibold heading-font mb-10">Project Diary</h2>
         
         <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-            <div class="flex items-center justify-between mb-8">
+            <div class="flex justify-between items-start mb-8">
                 <div>
-                    <span class="text-yellow-400 text-sm font-medium">WEEK 6 • April 28, 2026</span>
-                    <h3 class="text-3xl font-semibold mt-2">Mid-fidelity Prototyping & User Testing Round 1</h3>
+                    <span class="text-yellow-400 font-medium">Latest Entry • Week X</span>
+                    <h3 class="text-3xl font-semibold mt-3">Mid-fidelity Prototyping &amp; Usability Testing</h3>
                 </div>
-                <span class="px-5 py-2 bg-emerald-900 text-emerald-300 text-sm rounded-3xl">Completed</span>
+                <span class="px-6 py-2 bg-emerald-900/50 text-emerald-400 text-sm rounded-3xl">In Progress</span>
             </div>
             
-            <div class="grid md:grid-cols-12 gap-10">
-                <div class="md:col-span-7 prose prose-invert">
-                    <p>This week we transformed our low-fidelity wireframes into interactive mid-fidelity prototypes using Figma. I was responsible for the book discovery and recommendation flow.</p>
-                    <p>We conducted 6 usability tests with fellow students. Major finding: users wanted quicker access to "currently trending in my major" section.</p>
-                </div>
-                <div class="md:col-span-5 space-y-6">
-                    <img src="https://picsum.photos/id/237/800/400" class="rounded-2xl" alt="Prototype screenshot">
-                    <div class="flex gap-4 text-sm">
-                        <div class="bg-zinc-800 px-4 py-3 rounded-2xl flex-1">
-                            <i class="fa-solid fa-users text-yellow-400"></i>
-                            <div class="mt-2 font-medium">6 Participants</div>
-                        </div>
-                        <div class="bg-zinc-800 px-4 py-3 rounded-2xl flex-1">
-                            <i class="fa-solid fa-bug text-yellow-400"></i>
-                            <div class="mt-2 font-medium">3 Major Issues Found</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="text-zinc-400 max-w-2xl">Documenting my entire design process — from user research and ideation to prototyping and testing — for the Smart Library Companion project.</p>
             
             <a href="projects/smart-library/diary.html" 
                class="inline-flex items-center gap-3 mt-10 text-yellow-400 hover:text-yellow-300 font-medium">
-                Read Full Diary Entry →
+                Read Full Diary →
             </a>
-        </div>
-    </section>
-
-    <!-- Essays -->
-    <section id="essays" class="bg-zinc-900 py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12">Reflections & Essays</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-800 p-8 rounded-3xl">
-                    <div class="text-xs uppercase tracking-widest text-zinc-500 mb-4">April 15, 2026</div>
-                    <h3 class="font-semibold text-xl mb-4">The Ethics of Persuasive Design in Educational Apps</h3>
-                    <p class="text-zinc-400 text-sm line-clamp-4">How do we balance engagement with manipulation when designing learning tools?</p>
-                    <a href="#" class="text-yellow-400 text-sm mt-6 block">Read Essay →</a>
-                </div>
-                
-                <!-- Add more essays as needed -->
-            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-zinc-900">
         <div class="max-w-6xl mx-auto px-6 text-center text-zinc-500 text-sm">
-            <p>© 2026 Alex Chen • HCI Course Portfolio</p>
-            <p class="mt-2">Built with ❤️ using Tailwind CSS • Hosted on GitHub Pages</p>
+            <p>© 2026 Minho Joh • HCI Course Portfolio</p>
+            <p class="mt-2">Built with Tailwind CSS • Hosted on GitHub Pages</p>
         </div>
     </footer>
 
     <script>
-        // Simple smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 if (this.getAttribute('href').length > 1) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
