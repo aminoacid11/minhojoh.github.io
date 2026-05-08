@@ -7,197 +7,103 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
-        }
-        .project-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #eab308;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+        .glass { background: rgba(9, 9, 11, 0.9); backdrop-filter: blur(12px); }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
-    <!-- Navbar -->
-    <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+
+    <nav class="glass border-b border-zinc-900 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-yellow-400 rounded-2xl flex items-center justify-center text-zinc-900 font-bold text-2xl">MJ</div>
-                <span class="text-2xl font-semibold heading-font tracking-tight">Minho Joh</span>
+                <div class="w-8 h-8 bg-yellow-400 rounded-lg flex items-center justify-center text-black font-bold">MJ</div>
+                <span class="text-xl font-bold heading-font tracking-tight">Minho Joh</span>
             </div>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="nav-link hover:text-yellow-400 transition-colors">About</a>
-                <a href="#projects" class="nav-link hover:text-yellow-400 transition-colors">Projects</a>
-                <a href="#diary" class="nav-link hover:text-yellow-400 transition-colors">Project Diary</a>
-                <a href="#essays" class="nav-link hover:text-yellow-400 transition-colors">Reflections</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-yellow-400 transition-colors">About</a>
+                <a href="#project" class="hover:text-yellow-400 transition-colors">Project</a>
+                <a href="#essay" class="hover:text-yellow-400 transition-colors">Essay</a>
             </div>
-            
-            <a href="https://github.com/yourusername" target="_blank" 
-               class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-5 py-2.5 rounded-2xl text-sm font-medium transition-colors">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-            </a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-bg py-28">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 bg-zinc-800 text-yellow-400 text-sm font-medium px-5 py-2.5 rounded-3xl mb-6">
-                HCI • UX Design • AI Interaction
-            </div>
-            
-            <h1 class="text-6xl md:text-7xl font-bold heading-font tracking-tighter mb-6">
-                Hi, I'm Minho Joh
+    <section id="about" class="pt-32 pb-20 max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl">
+            <h1 class="text-6xl font-bold heading-font tracking-tighter mb-8">
+                Minho Joh
             </h1>
-            
-            <p class="text-2xl text-zinc-400 max-w-2xl mx-auto mb-10">
-                Part-time Master's student in Artificial Intelligence at HKUST.<br>
-                Full-time CRM Email Specialist at Crypto.com.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" 
-                   class="bg-yellow-400 hover:bg-yellow-300 text-zinc-900 font-semibold px-8 py-4 rounded-3xl flex items-center gap-3 transition-all">
-                    Explore My HCI Projects
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#diary" 
-                   class="border border-zinc-700 hover:border-zinc-500 font-medium px-8 py-4 rounded-3xl transition-all">
-                    Read Project Diary
-                </a>
+            <div class="space-y-6 text-xl text-zinc-400 leading-relaxed">
+                <p>
+                    I am currently working as a <span class="text-zinc-100">CRM Email Specialist at Crypto.com</span>, 
+                    while pursuing a <span class="text-zinc-100">Part-time Master's in Artificial Intelligence</span> 
+                    at the Hong Kong University of Science and Technology (HKUST).
+                </p>
+                <p>
+                    My work lives at the intersection of large-scale automated communication and 
+                    human-centric interaction design.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="max-w-6xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-5">
-                <img src="https://picsum.photos/id/64/600/700" 
-                     alt="Minho Joh" 
-                     class="rounded-3xl shadow-2xl w-full aspect-[4/5] object-cover">
-            </div>
-            <div class="md:col-span-7 space-y-8">
-                <h2 class="text-4xl font-semibold heading-font">About Me</h2>
-                <div class="prose prose-invert text-lg text-zinc-300">
-                    <p>I am a part-time Master's student in Artificial Intelligence at The Hong Kong University of Science and Technology (HKUST), while working full-time as a CRM Email Specialist at Crypto.com.</p>
-                    <p>My professional experience in email marketing and customer engagement, combined with my academic focus on AI, gives me a unique perspective on designing human-centered digital experiences. I am particularly interested in the intersection of AI and HCI — creating intuitive, intelligent, and delightful interfaces.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-zinc-800">
-                    <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">HKUST</div>
-                        <div class="text-sm text-zinc-500">MSc in AI (Part-time)</div>
-                    </div>
-                    <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">Crypto.com</div>
-                        <div class="text-sm text-zinc-500">CRM Email Specialist</div>
-                    </div>
-                    <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">Figma</div>
-                        <div class="text-sm text-zinc-500">Advanced</div>
-                    </div>
-                    <div>
-                        <div class="text-yellow-400 text-3xl font-semibold">User Research</div>
-                        <div class="text-sm text-zinc-500">Experienced</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="bg-zinc-900 py-20">
+    <section id="project" class="py-24 border-t border-zinc-900 bg-zinc-900/30">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold heading-font mb-12">Featured HCI Project</h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <a href="projects/smart-library/index.html" class="project-card block bg-zinc-800 rounded-3xl overflow-hidden">
-                    <div class="h-96 bg-zinc-700 relative">
-                        <img src="https://picsum.photos/id/1015/1200/700" 
-                             alt="Smart Library Companion" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                        <div class="absolute bottom-8 left-8 right-8">
-                            <span class="bg-yellow-400 text-zinc-900 text-xs font-bold px-4 py-2 rounded-full">CURRENT PROJECT</span>
-                            <h3 class="text-4xl font-semibold mt-4">Smart Library Companion</h3>
-                            <p class="text-zinc-300 mt-3 text-lg">An intelligent mobile application that enhances the library experience for university students using AI-powered recommendations and seamless interaction design.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Diary Teaser -->
-    <section id="diary" class="max-w-6xl mx-auto px-6 py-24">
-        <h2 class="text-4xl font-semibold heading-font mb-10">Project Diary</h2>
-        
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-            <div class="flex justify-between items-start mb-8">
+            <h2 class="text-sm font-mono text-yellow-400 uppercase tracking-widest mb-12 italic">// ARIN5301 Course Project</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="text-yellow-400 font-medium">Latest Entry • Week X</span>
-                    <h3 class="text-3xl font-semibold mt-3">Mid-fidelity Prototyping &amp; Usability Testing</h3>
+                    <h3 class="text-4xl font-bold heading-font mb-6 text-white">The Efficiency Paradox: Carousell AI Critique</h3>
+                    <p class="text-zinc-400 text-lg mb-8 leading-relaxed">
+                        An expert evaluation and empirical study of Carousell’s "Smart Listing" feature, 
+                        analyzing the friction between automated efficiency and user agency.
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="px-3 py-1 bg-zinc-800 rounded-md text-xs font-mono">Video Paper</span>
+                        <span class="px-3 py-1 bg-zinc-800 rounded-md text-xs font-mono">Heuristic Analysis</span>
+                    </div>
                 </div>
-                <span class="px-6 py-2 bg-emerald-900/50 text-emerald-400 text-sm rounded-3xl">In Progress</span>
+                <div class="bg-zinc-800 aspect-video rounded-2xl flex items-center justify-center border border-zinc-700 shadow-2xl">
+                    <span class="text-zinc-500 font-mono">[Video Paper Preview]</span>
+                </div>
             </div>
-            
-            <p class="text-zinc-400 max-w-2xl">Documenting my entire design process — from user research and ideation to prototyping and testing — for the Smart Library Companion project.</p>
-            
-            <a href="projects/smart-library/diary.html" 
-               class="inline-flex items-center gap-3 mt-10 text-yellow-400 hover:text-yellow-300 font-medium">
-                Read Full Diary →
-            </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-500 text-sm">
-            <p>© 2026 Minho Joh • HCI Course Portfolio</p>
-            <p class="mt-2">Built with Tailwind CSS • Hosted on GitHub Pages</p>
+    <section id="essay" class="py-24 max-w-4xl mx-auto px-6">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold heading-font text-white mb-2">Project Essay</h2>
+            <p class="text-yellow-400 font-mono text-sm uppercase">Submitted: May 9, 2026</p>
         </div>
+
+        <article class="prose prose-invert prose-lg max-w-none space-y-8 text-zinc-300 leading-relaxed">
+            <h3 class="text-2xl font-semibold text-white">The Efficiency Paradox: Bridging the Description-Experience Gap</h3>
+            
+            <p>
+                The inspiration for my video paper, <em>"The Efficiency Paradox,"</em> originated from a series of high-friction interactions with Carousell’s "Smart Listing" feature. As an active user of the platform, I observed a recurring pattern: the AI-driven automation, designed to save time, often created more work for the user. Two specific events served as my primary sources of evidence. First, an experiment where I uploaded a car photo that the system misidentified as "Property," and second, a pricing experiment where the AI suggested 960 HKD for a watch that eventually sold for 500 HKD. These were not merely technical glitches; they were fundamental violations of the <strong>Match between the System and the Real World.</strong>
+            </p>
+
+            <p>
+                In my video paper, I justify the critique using the <strong>Gulf of Execution</strong> and the <strong>Description-Experience Gap</strong>. While Carousell successfully bridges the Gulf of Execution by reducing the number of steps required to list an item, it fails to support the user’s <strong>Gulf of Evaluation</strong>. When the system provides an inaccurate price or category, the user is left with a "Verification Burden." They must now cross-reference the AI's logic with their own market knowledge, effectively canceling out the time saved by the initial automation. 
+            </p>
+
+            <p>
+                My thoughts on AI and interface design have shifted significantly throughout the ARIN5301 course. <strong>Before this course</strong>, I viewed AI primarily as a "Black Box" efficiency tool. My professional experience in CRM marketing led me to believe that "more automation is always better." I assumed that as long as the system offloaded a task from the human, the user experience was improved. I prioritized <strong>Functional Feasibility</strong> over <strong>Human Desirability</strong>.
+            </p>
+
+            <p>
+                <strong>After taking this course</strong>, my perspective has evolved toward <strong>Human-Centric Augmentation</strong>. I now understand that true efficiency is not about removing the human from the process, but about supporting <strong>User Agency</strong>. The course taught me that "Smart" features often lack <strong>Transparency</strong>. If a user doesn't understand <em>why</em> an AI suggested a specific price, they cannot trust the system. This realization led to my final recommendations in the video paper: shifting from a "Black Box" model to a "Glass Box" model using <strong>Confidence-Based Transparency</strong> and <strong>Explainable AI</strong>.
+            </p>
+
+            <p>
+                Ultimately, this project highlights that the future of C2C marketplaces lies not in total automation, but in a collaborative partnership between human expertise and machine speed. Good HCI design must preserve the "Social Presence" and trust that define community commerce, ensuring that AI serves as a supportive teammate rather than an invisible, error-prone clerk.
+            </p>
+        </article>
+    </section>
+
+    <footer class="py-12 border-t border-zinc-900 text-center text-zinc-600 text-xs">
+        <p>© 2026 Minho Joh • ARIN5301 HKUST • Built with Adobe AI & Tailwind</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href').length > 1) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
